@@ -13,13 +13,13 @@ public class Car {
 		this.yearOfProduction = yearOfProduction;
 		this.price = price;
 		this.weight = weight;
-		this.colour = Colour.valueOf(colour);
+		this.colour = Colour.valueOf(colour.toUpperCase().replaceAll("[^a-z^A-Z]", ""));
 	}
 
 	@Override
 	public String toString() {
 		return "Car (Name = " + name + ", yearOfProduction = " + yearOfProduction + ", price = " + price + ", weight = "
-				+ weight + ", colour = " + colour + ")";
+				+ weight + ", colour = " + colour.nameColour + ")";
 	}
 	
 	

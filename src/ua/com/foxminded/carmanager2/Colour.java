@@ -15,9 +15,16 @@ public enum Colour {
 	
 	
 	
-	String name;
+	String nameColour;
 	
-	Colour(String name) {
-		this.name = name;
+	Colour(String nameColour) {
+		this.nameColour = nameColour;
 	}
+
+	public String getNameColour() {
+		return nameColour;
+	}
+
+	
+	
 }
