@@ -19,7 +19,7 @@ public class Car {
 	@Override
 	public String toString() {
 		return "Car (Name = " + name + ", yearOfProduction = " + yearOfProduction + ", price = " + price + ", weight = "
-				+ weight + ", colour = " + colour.nameColour + ")";
+				+ weight + ", colour = " + colour.getNameColour() + ")";
 	}
 	
 	

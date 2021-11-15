@@ -12,19 +12,15 @@ public enum Colour {
 	BLUE("Blue"),
 
 	GREEN("Green");
-	
-	
-	
-	String nameColour;
-	
-	Colour(String nameColour) {
-		this.nameColour = nameColour;
+
+	private String nameColour;
+
+	Colour(String nameColourString) {
+		this.nameColour = nameColourString;
 	}
 
 	public String getNameColour() {
 		return nameColour;
 	}
 
-	
-	
 }
