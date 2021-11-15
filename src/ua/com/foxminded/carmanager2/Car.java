@@ -7,6 +7,7 @@ public class Car {
 	int price;
 	int weight;
 	Colour colour;
+	private int distance = 0;
 
 	public Car(String name, int yearOfProduction, int price, int weight, String colour) {
 		this.name = name;
@@ -16,10 +17,24 @@ public class Car {
 		this.colour = Colour.valueOf(colour.toUpperCase().replaceAll("[^a-z^A-Z]", ""));
 	}
 
+	protected void AddDistance(int additionalDistance) {
+		if (additionalDistance > 0) {
+			distance += additionalDistance;
+		} else
+			System.out.println("Distance shoul be more than 0 km!");
+	}
+	
+	
+
+	public int getDistance() {
+		return distance;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Car (Name = " + name + ", yearOfProduction = " + yearOfProduction + ", price = " + price + ", weight = "
-				+ weight + ", colour = " + colour.getNameColour() + ")";
+				+ weight + ", colour = " + colour.getNameColour() + ", ODO = " + getDistance() + ")";
 	}
 
 	@Override
@@ -58,7 +73,5 @@ public class Car {
 			return false;
 		return true;
 	}
-	
-	
 
 }
