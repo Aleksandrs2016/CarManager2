@@ -22,7 +22,4 @@ public enum Colour {
 	public String getNameColour() {
 		return nameColour;
 	}
-	
-	
-
 }

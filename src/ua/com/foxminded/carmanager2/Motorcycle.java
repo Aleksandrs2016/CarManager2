@@ -40,8 +40,8 @@ public class Motorcycle {
 		} else
 			throw new ArithmeticException("Distance should be more than 0 km !");
 	}
-	
-	public void repaint (String repaintColour) {
+
+	public void repaint(String repaintColour) {
 		this.colour = Colour.valueOf(repaintColour.toUpperCase().replaceAll("[^a-z^A-Z]", ""));
 	}
 

@@ -23,13 +23,10 @@ public class Car {
 		} else
 			throw new ArithmeticException("Distance should be more than 0 km !");
 	}
-	
-	
 
 	public int getDistance() {
 		return distance;
 	}
-
 
 	@Override
 	public String toString() {
