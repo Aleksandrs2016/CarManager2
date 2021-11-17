@@ -40,6 +40,10 @@ public class Motorcycle {
 		} else
 			throw new ArithmeticException("Distance should be more than 0 km !");
 	}
+	
+	public void repaint (String repaintColour) {
+		this.colour = Colour.valueOf(repaintColour.toUpperCase().replaceAll("[^a-z^A-Z]", ""));
+	}
 
 	public int getMotoDistance() {
 		return motoDistance;
@@ -54,7 +58,7 @@ public class Motorcycle {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(colour, isReadyToDrive);
+		return Objects.hash(colour, isReadyToDrive, motoDistance);
 	}
 
 	@Override
@@ -66,7 +70,7 @@ public class Motorcycle {
 		if (getClass() != obj.getClass())
 			return false;
 		Motorcycle other = (Motorcycle) obj;
-		return colour == other.colour && isReadyToDrive == other.isReadyToDrive;
+		return colour == other.colour && isReadyToDrive == other.isReadyToDrive && motoDistance == other.motoDistance;
 	}
 
 }
