@@ -17,7 +17,7 @@ public class Car {
 		this.colour = Colour.valueOf(colour.toUpperCase().replaceAll("[^a-z^A-Z]", ""));
 	}
 
-	protected void AddDistance(int additionalDistance) {
+	protected void addDistance(int additionalDistance) {
 		if (additionalDistance > 0) {
 			distance += additionalDistance;
 		} else

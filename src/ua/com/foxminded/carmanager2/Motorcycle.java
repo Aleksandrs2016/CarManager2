@@ -11,6 +11,7 @@ public class Motorcycle {
 	Colour colour;
 	String engineType;
 	boolean isReadyToDrive;
+	private int motoDistance = 0;
 
 	public Motorcycle(String name, int yearOfProduction, int price, int weight, String colour, String engineType,
 			boolean isReadyToDrive) {
@@ -23,11 +24,32 @@ public class Motorcycle {
 		this.isReadyToDrive = isReadyToDrive;
 	}
 
+	public boolean repair() {
+		return isReadyToDrive = true;
+	}
+
+	public boolean destroyEngine() {
+		return isReadyToDrive = false;
+	}
+
+	protected void motoAddDistance(int additionalDistance) {
+		if (additionalDistance > 0) {
+			motoDistance += additionalDistance;
+			if (motoDistance > 200000)
+				destroyEngine();
+		} else
+			throw new ArithmeticException("Distance should be more than 0 km !");
+	}
+
+	public int getMotoDistance() {
+		return motoDistance;
+	}
+
 	@Override
 	public String toString() {
-		return "Motorcycle (Name = " + name + ", yearOfProduction = " + yearOfProduction + ", price = " + price + ", weight = "
-				+ weight + ", color = " + colour.getNameColour() + ", engineType = " + engineType + ", isReadyToDrive = " + isReadyToDrive
-				+ ")";
+		return "Motorcycle (Name = " + name + ", yearOfProduction = " + yearOfProduction + ", price = " + price
+				+ ", weight = " + weight + ", color = " + colour.getNameColour() + ", engineType = " + engineType
+				+ ", isReadyToDrive = " + isReadyToDrive + ", ODO = " + getMotoDistance() + ")";
 	}
 
 	@Override
