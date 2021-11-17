@@ -21,7 +21,7 @@ public class Car {
 		if (additionalDistance > 0) {
 			distance += additionalDistance;
 		} else
-			System.out.println("Distance shoul be more than 0 km!");
+			throw new ArithmeticException("Distance should be more than 0 km !");
 	}
 	
 	

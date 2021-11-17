@@ -8,7 +8,7 @@ public class CarManager {
 		Car renault = new Car("Renault Laguna", 2000, 9700, 1600, "WHITE");
 		Car renault1 = new Car("Renault Laguna", 2000, 9700, 1600, "WHITE");
 		
-		prius.AddDistance(10000);
+		prius.AddDistance(1000);
 		
 		Motorcycle suzuki = new Motorcycle("Suzuki GSX-R1000", 2021, 16000, 600, " black", "Disel", true);
 		Motorcycle yamaha = new Motorcycle("Yamaha  FZ1", 2007, 9000, 700, "orangE ", "Gas", false);
