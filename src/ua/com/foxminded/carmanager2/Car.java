@@ -23,7 +23,14 @@ public class Car {
 		} else
 			throw new ArithmeticException("Distance should be more than 0 km !");
 	}
-
+	
+	protected void addDistance(double additionalDistance) {
+		if (additionalDistance > 0) {
+			distance += additionalDistance;
+		} else
+			throw new ArithmeticException("Distance should be more than 0 km !");
+	}
+	
 	public int getDistance() {
 		return distance;
 	}

@@ -10,19 +10,21 @@ public class CarManager {
 		Car renault = new Car("Renault Laguna", 2000, 9700, 1600, "WHITE");
 		Car renault1 = new Car("Renault Laguna", 2000, 9700, 1600, "WHITE");
 
-		prius.addDistance(1000);
+		prius.addDistance(1000.9);
 
 		Motorcycle suzuki = new Motorcycle("Suzuki GSX-R1000", 2021, 16000, 600, " black", "Disel", true);
 		Motorcycle yamaha = new Motorcycle("Yamaha  FZ1", 2007, 9000, 700, "orangE ", "Gas", false);
 
-//		System.out.println(prius);
-//		System.out.println(renault);
-//		System.out.println(renault1);
+		System.out.println(prius);
+		System.out.println(renault);
+		System.out.println(renault1);
 
-//		System.out.println("");
+		System.out.println("");
 
 		suzuki.motoAddDistance(250000);
+		suzuki.motoAddDistance(11.5);
 		yamaha.motoAddDistance(250000);
+		yamaha.motoAddDistance(-11.5);
 
 		System.out.println(suzuki);
 		System.out.println(yamaha);
