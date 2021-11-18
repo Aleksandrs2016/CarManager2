@@ -8,6 +8,8 @@ public class Car {
 	int weight;
 	Colour colour;
 	private int distance = 0;
+	protected int distanceOnService = 0;
+	protected boolean isReadyToService = false;
 
 	public Car(String name, int yearOfProduction, int price, int weight, String colour) {
 		this.name = name;
@@ -20,25 +22,42 @@ public class Car {
 	protected void addDistance(int additionalDistance) {
 		if (additionalDistance > 0) {
 			distance += additionalDistance;
+			distanceOnService += additionalDistance;
+			isReadyToService();
 		} else
 			throw new ArithmeticException("Distance should be more than 0 km !");
 	}
-	
+
 	protected void addDistance(double additionalDistance) {
 		if (additionalDistance > 0) {
 			distance += additionalDistance;
+			distanceOnService += additionalDistance;
+			isReadyToService();
 		} else
 			throw new ArithmeticException("Distance should be more than 0 km !");
 	}
-	
+
+	public boolean isReadyToService() {
+		if (distanceOnService > 10000) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public int getDistance() {
 		return distance;
+	}
+
+	public int getDistanceOnService() {
+		return distanceOnService;
 	}
 
 	@Override
 	public String toString() {
 		return "Car (Name = " + name + ", yearOfProduction = " + yearOfProduction + ", price = " + price + ", weight = "
-				+ weight + ", colour = " + colour.getNameColour() + ", ODO = " + getDistance() + ")";
+				+ weight + ", colour = " + colour.getNameColour() + ", ODO = " + getDistance()
+				+ ", Ready to Service? - " + isReadyToService + ")";
 	}
 
 	@Override

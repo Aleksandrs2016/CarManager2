@@ -6,11 +6,11 @@ public class CarManager {
 
 	public static void main(String[] args) {
 
-		Car prius = new Car("Toyota Prius", 2008, 15000, 1200, "    GrEEn  !!");
+		PassengerCar prius = new PassengerCar("Toyota Prius", 2008, 15000, 1200, "    GrEEn  !!");
 		Car renault = new Car("Renault Laguna", 2000, 9700, 1600, "WHITE");
 		Car renault1 = new Car("Renault Laguna", 2000, 9700, 1600, "WHITE");
 
-		prius.addDistance(1000.9);
+		prius.addDistance(60000);
 
 		Motorcycle suzuki = new Motorcycle("Suzuki GSX-R1000", 2021, 16000, 600, " black", "Disel", true);
 		Motorcycle yamaha = new Motorcycle("Yamaha  FZ1", 2007, 9000, 700, "orangE ", "Gas", false);
