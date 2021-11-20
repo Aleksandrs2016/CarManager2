@@ -1,6 +1,6 @@
 package ua.com.foxminded.carmanager2;
 
-public class Car {
+public abstract class Car {
 
 	String name;
 	int yearOfProduction;
@@ -29,22 +29,13 @@ public class Car {
 	}
 
 	protected void addDistance(double additionalDistance) {
-/*		if (additionalDistance > 0) {
-			distance += additionalDistance;
-			distanceOnService += additionalDistance;
-			isReadyToService();
-		} else
-			throw new ArithmeticException("Distance should be more than 0 km !");
-*/
 		addDistance((int) Math.round(additionalDistance));
 	}
 
-	public boolean isReadyToService() {
-		if (distanceOnService > 10000) {
-			return true;
-		} else {
-			return false;
-		}
+	public abstract boolean isReadyToService();
+	
+	protected void services() {
+		distanceOnService = 0;
 	}
 
 	public int getDistance() {

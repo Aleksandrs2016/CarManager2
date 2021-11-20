@@ -40,14 +40,9 @@ public class Motorcycle {
 		} else
 			throw new ArithmeticException("Distance should be more than 0 km !");
 	}
-	
+
 	protected void motoAddDistance(double additionalDistance) {
-		if (additionalDistance > 0) {
-			motoDistance += Math.round(additionalDistance);
-			if (motoDistance > 200000)
-				destroyEngine();
-		} else
-			throw new ArithmeticException("Distance should be more than 0 km !");
+		motoAddDistance((int) Math.round(additionalDistance));
 	}
 
 	public void repaint(String repaintColour) {
