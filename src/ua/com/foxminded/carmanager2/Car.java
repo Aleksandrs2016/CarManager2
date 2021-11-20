@@ -29,12 +29,14 @@ public class Car {
 	}
 
 	protected void addDistance(double additionalDistance) {
-		if (additionalDistance > 0) {
+/*		if (additionalDistance > 0) {
 			distance += additionalDistance;
 			distanceOnService += additionalDistance;
 			isReadyToService();
 		} else
 			throw new ArithmeticException("Distance should be more than 0 km !");
+*/
+		addDistance((int) Math.round(additionalDistance));
 	}
 
 	public boolean isReadyToService() {
@@ -56,8 +58,8 @@ public class Car {
 	@Override
 	public String toString() {
 		return "Car (Name = " + name + ", yearOfProduction = " + yearOfProduction + ", price = " + price + ", weight = "
-				+ weight + ", colour = " + colour.getNameColour() + ", ODO = " + getDistance()
-				+ ", Ready to Service? - " + isReadyToService + ")";
+				+ weight + ", colour = " + colour.getNameColour() + ", ODO = " + getDistance() + ", ODO on Service = "
+				+ getDistanceOnService() + ", Ready to Service? - " + isReadyToService() + ")";
 	}
 
 	@Override
