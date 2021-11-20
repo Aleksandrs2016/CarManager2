@@ -35,6 +35,7 @@ public class Motorcycle {
 	protected void motoAddDistance(int additionalDistance) {
 		if (additionalDistance > 0) {
 			motoDistance += additionalDistance;
+			isReadyToService();
 			if (motoDistance > 200000)
 				destroyEngine();
 		} else
@@ -49,6 +50,14 @@ public class Motorcycle {
 		this.colour = Colour.valueOf(repaintColour.toUpperCase().replaceAll("[^a-z^A-Z]", ""));
 	}
 
+	public boolean isReadyToService() {
+		if (motoDistance > 8000) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public int getMotoDistance() {
 		return motoDistance;
 	}
@@ -57,7 +66,8 @@ public class Motorcycle {
 	public String toString() {
 		return "Motorcycle (Name = " + name + ", yearOfProduction = " + yearOfProduction + ", price = " + price
 				+ ", weight = " + weight + ", color = " + colour.getNameColour() + ", engineType = " + engineType
-				+ ", isReadyToDrive = " + isReadyToDrive + ", ODO = " + getMotoDistance() + ")";
+				+ ", isReadyToDrive = " + isReadyToDrive + ", ODO = " + getMotoDistance() + ", Ready to Service? - "
+				+ isReadyToService() + ")";
 	}
 
 	@Override

@@ -25,9 +25,9 @@ public class CarManager {
 
 		System.out.println("");
 
-		suzuki.motoAddDistance(1000);
+		suzuki.motoAddDistance(8000);
 		suzuki.motoAddDistance(11.5);
-		yamaha.motoAddDistance(1000);
+		yamaha.motoAddDistance(8000);
 		yamaha.motoAddDistance(11.5);
 
 		System.out.println(suzuki);

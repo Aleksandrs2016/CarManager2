@@ -1,6 +1,6 @@
 package ua.com.foxminded.carmanager2;
 
-public abstract class Car {
+public abstract class Car implements Serviceable {
 
 	String name;
 	int yearOfProduction;
@@ -19,7 +19,7 @@ public abstract class Car {
 		this.colour = Colour.valueOf(colour.toUpperCase().replaceAll("[^a-z^A-Z]", ""));
 	}
 
-	protected void addDistance(int additionalDistance) {
+	public void addDistance(int additionalDistance) {
 		if (additionalDistance > 0) {
 			distance += additionalDistance;
 			distanceOnService += additionalDistance;
@@ -28,13 +28,11 @@ public abstract class Car {
 			throw new ArithmeticException("Distance should be more than 0 km !");
 	}
 
-	protected void addDistance(double additionalDistance) {
+	public void addDistance(double additionalDistance) {
 		addDistance((int) Math.round(additionalDistance));
 	}
-
-	public abstract boolean isReadyToService();
 	
-	protected void services() {
+	public void services() {
 		distanceOnService = 0;
 	}
 
