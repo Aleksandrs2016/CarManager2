@@ -6,7 +6,7 @@ public class CarManager {
 
 	public static void main(String[] args) {
 
-		Car prius = new PassengerCar("Toyota Prius", 2008, 15000, 1200, "    GrEEn  !!");
+/*		Car prius = new PassengerCar("Toyota Prius", 2008, 15000, 1200, "    GrEEn  !!");
 		Car renault = new Buss("Renault Laguna", 2000, 9700, 1600, "WHITE");
 		Car renault1 = new PassengerCar("Renault Laguna", 2000, 9700, 1600, "WHITE");
 
@@ -63,7 +63,40 @@ public class CarManager {
 //		System.out.println("Renault1 = Prius? - " + renault1.equals(prius));
 //		System.out.println("Renault1 = Renault? - " + renault1.equals(renault));
 		System.out.println("Yamaha FZ1 = Suzuki GSX-R1000? - " + yamaha.equals(suzuki));
-
+*/
+		
+		AgroculturMachinery cat = new Tractor("C.A.T", 1988, 50000, "tractor", 1000, false);
+		AgroculturMachinery volvo = new Combine("Volvo", 1950, 1450000, "combine", 30, false);
+		
+		System.out.println(cat);
+		System.out.println(volvo);
+		
+		cat.addDistance(0.5);
+		cat.addDistance(0.5);
+		volvo.addDistance(0.5);
+		volvo.addDistance(0.5);
+		
+		System.out.println("After work");
+		
+		System.out.println(cat);
+		System.out.println(volvo);
+		
+		System.out.println("After Service");
+		volvo.services();
+		cat.services();
+		
+		System.out.println(cat);
+		System.out.println(volvo);
+		
+		cat.addDistance(500);
+		cat.addDistance(501);
+		volvo.addDistance(15);
+		volvo.addDistance(16);
+		
+		System.out.println("After work2");
+		
+		System.out.println(cat);
+		System.out.println(volvo);
 	}
 
 }
