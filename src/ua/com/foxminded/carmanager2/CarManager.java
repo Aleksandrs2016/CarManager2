@@ -1,5 +1,8 @@
 package ua.com.foxminded.carmanager2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //import java.util.Scanner;
 
 public class CarManager {
@@ -68,7 +71,14 @@ public class CarManager {
 		AgroculturMachinery cat = new Tractor("C.A.T", 1988, 50000, "tractor", 1000, false);
 		AgroculturMachinery volvo = new Combine("Volvo", 1950, 1450000, "combine", 30, false);
 		
-		System.out.println(cat);
+		System.out.println(volvo.getClass());
+		
+		List<AgroculturMachinery> collections = new ArrayList<>();
+		collections.add(volvo);
+		collections.add(cat);
+		System.out.println(collections);
+		
+/*		System.out.println(cat);
 		System.out.println(volvo);
 		
 		cat.addDistance(0.5);
@@ -97,6 +107,7 @@ public class CarManager {
 		
 		System.out.println(cat);
 		System.out.println(volvo);
+*/
 	}
 
 }
