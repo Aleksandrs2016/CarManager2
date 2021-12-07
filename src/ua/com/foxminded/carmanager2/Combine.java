@@ -18,7 +18,7 @@ public class Combine extends AgroculturMachinery {
 
 	@Override
 	public String toString() {
-		return "Tractor [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", type="
+		return "Combine [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", type="
 				+ type.name().toLowerCase() + ", usageMeter=" + usageMeter + " hours, usageMeterOnService="
 				+ usageMeterOnService + " hours, isReadyToService=" + isReadyToService() + "]";
 	}
