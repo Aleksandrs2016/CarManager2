@@ -18,10 +18,10 @@ public class CarManager {
 		renault.addDistance(22.6);
 		renault1.addDistance(20000);
 //		prius.services();
-
+*/
 		Motorcycle suzuki = new Motorcycle("Suzuki GSX-R1000", 2021, 16000, 600, " black", "Disel", true);
 		Motorcycle yamaha = new Motorcycle("Yamaha  FZ1", 2007, 9000, 700, "orangE ", "Gas", false);
-
+/*
 		System.out.println(prius);
 		System.out.println(renault);
 		System.out.println(renault1);
@@ -77,6 +77,11 @@ public class CarManager {
 		collections.add(volvo);
 		collections.add(cat);
 		System.out.println(collections);
+		
+		List<Motorcycle> motorcycle = new ArrayList<>();
+		motorcycle.add(suzuki);
+		motorcycle.add(yamaha);
+		System.out.println(motorcycle);
 		
 /*		System.out.println(cat);
 		System.out.println(volvo);
